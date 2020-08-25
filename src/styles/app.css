@@ -1,0 +1,19 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+}
+
+.app-container {
+    display: grid;
+    row-gap: 50px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

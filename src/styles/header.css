@@ -1,0 +1,9 @@
+.header-container {
+    background-color: lightgray;
+}
+
+.header-title {
+    padding: 10px;
+    
+    text-align: center;
+}
