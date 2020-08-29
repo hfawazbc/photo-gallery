@@ -1,8 +1,10 @@
 :root {
-    --modal-color: #eeeeee;
-    --leave-color: #EF5350;
-    --go-color: #66BB6A;
-    --tag-color: #29B6F6;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey: #e0e0e0;
+    --color-green: #66BB6A;
+    --color-red: #EF5350;
+    --color-blue: #42A5F5;
 }
 
 .image-modal-backdrop {
@@ -23,105 +25,196 @@
 
 .image-modal-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
 
-    padding: 10px;
-    
-    width: 1000px;
+    border-radius: 10px;
+
+    padding: 20px;
+
+    width: 75%;
+    height: 575px;
 
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
-    background-color: var(--modal-color);
+    background-color: var(--color-white);
 }
 
-.image-modal-info-wrapper {
-    order: 1;
+.image-modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    border-radius: 5px;
+
+    background-color: var(--color-grey);
+}
+
+.image-modal-close-btn-wrapper {
     display: grid;
-    grid-template-rows: 8% 42% 42% 8%;
+
+    width: 21%;
+
+    margin-left: 79%;
 }
 
 .image-modal-close-btn {
-    float: right;
-    
-    width: 20%;
-    height: 100%;
-     
     border: none;
 
-    background-color: var(--leave-color);
+    padding: 10px;
+
+    border-radius: 5px;
+
+    background-image: url('../icons/close-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-color: var(--color-white);
 
     cursor: pointer;
 }
 
-.image-modal-caption-wrapper {
-    display: grid;
-
-    padding: 10px;
-
-    border: black 2px solid;
+.image-modal-close-btn:hover {
+    background-color: var(--color-red);
+    transition: ease 0.25s;
 }
 
-.image-modal-caption {
-    text-align: center;
+.image-modal-left {
+    display: flex;
 
-    border: 2px solid #000;
+    height: 575px;
 
-    background-color: yellow;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 5px;
+}
+
+.image-modal-pic {
+    width: 100%;
+
+    object-fit: contain;
+
+    vertical-align: middle;
+
+    backdrop-filter: blur(25px);
+
+    border-radius: 5px;
+}
+
+.image-modal-right {
+    display: grid;
+    grid-template-rows: 1fr 4fr 8fr 1fr;
+    row-gap: 20px;
 }
 
 .image-modal-tag-wrapper {
     display: grid;
-    row-gap: 10px;
-
-    border: 2px solid #000;
-
-    padding: 10px;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 20px;
 }
 
 .image-modal-tag {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    background-color: var(--tag-color);
+    background-color: var(--color-grey);
 
-    word-break: break-all;
+    border-radius: 5px;
 }
 
 .image-modal-download-link {
     display: grid;
 
     color: #000;
+    
     text-decoration: none;
 }
 
 .image-modal-download-btn {
     border: none;
 
-    height: 100%;
+    padding: 10px;
 
-    background-color: var(--go-color);
+    background-image: url('../icons/download.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-color: var(--color-green);
 
     cursor: pointer;
+
+    border-radius: 5px;
 }
 
-.image-modal-pic-wrapper {
-    order: 0;
+@media (max-width: 768px) {
+    .image-modal-content {
+        display: grid;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+        grid-template-columns: none;
+        column-gap: 0px;
 
-.image-modal-pic {
-    width: 750px;
-    height: 500px;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 20px;
 
-    object-fit: contain;
-    vertical-align: middle;
+        width: 75%;
+        height: 575px;
 
-    backdrop-filter: blur(25px);
+        padding: 20px;
+    }
+
+    .image-modal-left {
+        height: 375px;
+    }
+
+    .image-modal-right {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+
+        grid-template-rows: 4fr 1fr;
+        row-gap: 20px;
+    }
+
+    .image-modal-header {
+        order: 0;
+
+        text-align: center;
+    }
+    
+    .image-modal-tag-wrapper {
+        display: grid;
+
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 8px;
+
+        order: 1;
+    }
+
+    .image-modal-tag {
+        padding-left: 2px;
+        padding-right: 2px
+    }
+
+    .image-modal-close-btn-wrapper {
+        display: grid;
+
+        width: 100%;
+
+        margin: 0px;
+
+        order: 2;
+    }
+
+    .image-modal-download-link {
+        order: 3;
+    }    
 }

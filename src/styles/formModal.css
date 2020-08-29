@@ -1,19 +1,35 @@
 :root {
-    --modal-color: #eeeeee;
-    --leave-color: #EF5350;
-    --go-color: #66BB6A;
-    --tag-color: #29B6F6;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey: #e0e0e0;
+    --color-green: #66BB6A;
+    --color-red: #EF5350;
+    --color-blue: #42A5F5;
 }
 
 .form-modal-open-btn {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 
     border: none;
 
-    background-color: var(--go-color);
+    padding: 10px;
 
+    border-radius: 5px;
+
+    background-image: url('../icons/add-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-color: var(--color-white);
+    
     cursor: pointer;
+}
+
+.form-modal-open-btn:hover {
+    background-color: var(--color-grey);
+    transition: ease 0.25s;
 }
 
 .form-modal-backdrop {
@@ -34,19 +50,23 @@
 
 .form-modal-content {
     display: grid;
-    grid-template-rows: 1fr 10fr 1fr;
-    row-gap: 10px;
 
-    padding: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 20px;
+
+    padding: 20px;
+
+    border-radius: 10px;
     
-    width: 900px;
+    width: 75%;
+    height: 575px;
 
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
-    background-color: var(--modal-color);
+    background-color: var(--color-white);
 }
 
 .form-modal-top {
@@ -60,23 +80,39 @@
 }
 
 .form-modal-close-btn {
+    padding: 10px;
+
     border: none;
 
-    background-color: var(--leave-color);
+    border-radius: 5px;
+
+    background-image: url('../icons/close-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-color: var(--color-white);
 
     cursor: pointer;
 }
 
+.form-modal-close-btn:hover {
+    background-color: var(--color-red);
+    transition: ease 0.25s;
+}
+
 .form-modal-middle {
     display: grid;
+
     grid-template-columns: 1fr 2fr;
-    column-gap: 10px;
+    column-gap: 20px;
 }
 
 .form-modal-left {
     display: grid;
-    grid-template-rows:  1fr 1fr 1fr 3fr;
-    row-gap: 10px;
+
+    grid-template-rows:  1fr 1fr 1fr 4fr;
+    row-gap: 20px;
 }
 
 .form-modal-field-label {
@@ -86,6 +122,7 @@
 
 .form-modal-field-wrapper {
     display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 input[type="file"] {
@@ -93,46 +130,72 @@ input[type="file"] {
 }
 
 input[type="text"] {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 5px;
 
     width: 100%;
 
     box-sizing: border-box;
 }
 
-.form-modal-select-file-btn {
+.form-modal-choose-file-btn {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: var(--go-color);
+    padding: 7px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-image: url('../icons/photo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-color: var(--color-grey);
 
     cursor: pointer;
 }
 
-.form-modal-tag-field-wrapper {
+.form-modal-choose-file-btn:hover {
+    background-color: var(--color-blue);
+    transition: ease 0.25s;
+}
+
+.form-modal-tag-wrapper {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 75% 25%;
 }
 
 .form-modal-add-tag-btn {
+    padding: 7px;
+
     border: none;
 
-    background-color: var(--go-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    background-image: url('../icons/add-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-color: var(--color-grey);
 
     cursor: pointer;
+}
+
+.form-modal-add-tag-btn:hover {
+    background-color: var(--color-green);
+    transition: ease 0.25s;
 }
 
 .form-modal-tag-preview {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    row-gap: 10px;
-}
 
-.form-modal-tag-container {
-    display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 20px;
 }
 
 .form-modal-tag {
@@ -140,23 +203,47 @@ input[type="text"] {
     justify-content: center;
     align-items: center;
 
-    background-color: var(--tag-color);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    background-color: var(--color-grey);
 }
 
 .form-modal-remove-tag-btn {
+    padding: 7px;
+
     border: none;
 
-    background-color: var(--leave-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    background-image: url('../icons/close-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-color: var(--color-grey);
 
     cursor: pointer;
+}
+
+.form-modal-remove-tag-btn:hover {
+    background-color: var(--color-red);
+    transition: ease 0.25s;
 }
 
 .form-modal-right {
     display: flex;
 
-    height: 450px;
+    height: 460px;
 
-    background-color: lightgray;
+    background-color: var(--color-grey);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 5px;
 }
 
 .form-modal-image-preview {
@@ -165,16 +252,81 @@ input[type="text"] {
     object-fit: contain;
 
     vertical-align: middle;
+
+    backdrop-filter: blur(25px);
+
+    border-radius: 5px;
 }
 
 .form-modal-bottom {
     display: grid;
+
+    border-radius: 5px;
 }
 
-.form-modal-submit-btn {
+.form-modal-upload-btn {
+    padding: 10px;
+
     border: none;
 
-    border: solid 1px lightgray;
+    border-radius: 5px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-color: transparent;
 
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .form-modal-top {
+        grid-template-columns: 90% 10%;
+    }
+
+    .form-modal-middle {
+        grid-template-columns: none;
+        column-gap: 0px;
+
+        grid-template-rows: 0.5fr 2fr;
+        row-gap: 20px;
+    }
+
+    .form-modal-left {
+        grid-template-rows: 1fr 1fr 1fr 2fr;
+        row-gap: 10px;
+
+        order: 1;
+    }
+
+    .form-modal-tag-preview {
+        grid-template-columns: none;
+        column-gap: 0px;
+
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 10px;
+    }
+
+    .form-modal-right {
+        height: 100px;
+
+        order: 0;
+    }
+
+    .form-modal-close-btn {
+        padding: 5px;
+    }
+
+    .form-modal-upload-btn {
+        padding: 5px;
+    }
+
+    .form-modal-choose-file-btn {
+        padding: 5px;
+    }
+
+    .form-modal-remove-tag-btn {
+        padding: 5px;
+    }
 }

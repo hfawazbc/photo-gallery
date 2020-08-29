@@ -31,5 +31,5 @@ export default function useAppStorage(file, caption, tags) {
 
     }, [file, caption, tags]);
 
-    return { progress, url, error, setProgress }
+    return {progress, url, error, setProgress, setUrl}
 }

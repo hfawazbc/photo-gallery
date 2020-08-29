@@ -1,3 +1,12 @@
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey: #e0e0e0;
+    --color-green: #66BB6A;
+    --color-red: #EF5350;
+    --color-blue: #42A5F5;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -5,15 +14,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    width: 80%;
-    margin: auto;
-}
-
 .app-container {
     display: grid;
     row-gap: 50px;
 
-    margin-top: 50px;
     margin-bottom: 50px;
 }
