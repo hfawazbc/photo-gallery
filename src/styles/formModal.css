@@ -295,12 +295,17 @@ input[type="text"] {
         grid-template-columns: none;
         column-gap: 0px;
 
-        grid-template-rows: 0.5fr 2fr;
+        grid-template-rows: 1fr 2fr;
         row-gap: 20px;
     }
 
+    .form-modal-field-wrapper {
+        grid-template-rows: none;
+        grid-template-columns: 25% 75%;
+    }
+
     .form-modal-left {
-        grid-template-rows: 0.85fr 0.75fr 0.75fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 5fr;
         row-gap: 10px;
 
         order: 1;
@@ -310,12 +315,14 @@ input[type="text"] {
         grid-template-columns: none;
         column-gap: 0px;
 
+        
+
         grid-template-rows: repeat(5, 1fr);
         row-gap: 10px;
     }
 
     .form-modal-right {
-        height: 100px;
+        height: 140px;
 
         order: 0;
     }

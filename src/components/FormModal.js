@@ -22,6 +22,13 @@ export default function FormModal() {
 
     const fileInput = document.querySelector('#file-input');
 
+    let docBody = document.querySelector('body');
+    if (selectedForm === true) {
+        docBody.style.overflow = 'hidden';
+    } else {
+        docBody.style.overflow = 'visible';
+    }
+
     useEffect(() => {
         if (url) {
             setFile(null);

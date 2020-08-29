@@ -3,6 +3,13 @@ import '../styles/imageModal.css';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function ImageModal({id, selectedImage, setSelectedImage, imageId, url, caption, tags}) {
+    let docBody = document.querySelector('body');
+    if (selectedImage === true) {
+        docBody.style.overflow = 'hidden';
+    } else {
+        docBody.style.overflow = 'visible';
+    }
+
     return (
         <div className={selectedImage === true && id === imageId ? "image-modal-backdrop" : "image-modal-invisible"}>
             <div className="image-modal-content">
