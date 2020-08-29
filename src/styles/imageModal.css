@@ -33,7 +33,7 @@
     padding: 20px;
 
     width: 75%;
-    height: 575px;
+    height: 75vh;
 
     position: absolute;
     left: 50%;
@@ -47,6 +47,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
 
     border-radius: 5px;
 
@@ -86,7 +88,7 @@
 .image-modal-left {
     display: flex;
 
-    height: 575px;
+    height: 75vh;
 
     background-size: cover;
     background-position: center;
@@ -165,15 +167,13 @@
         row-gap: 20px;
 
         width: 75%;
-        height: 575px;
+        height: 75vh;
 
         padding: 20px;
-
-        overflow-y: auto;
     }
 
     .image-modal-left {
-        height: 375px;
+        height: 45vh;
     }
 
     .image-modal-right {
