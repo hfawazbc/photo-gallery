@@ -170,6 +170,8 @@
         height: 75vh;
 
         padding: 20px;
+
+        overflow-y: auto;
     }
 
     .image-modal-left {
