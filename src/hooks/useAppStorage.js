@@ -1,5 +1,5 @@
-import {useState, useEffect} from 'react';
-import {appStorage, appFirestore, timestamp} from '../firebase/config';
+import { useState, useEffect } from 'react';
+import { appStorage, appFirestore, timestamp } from '../firebase/config';
 
 export default function useAppStorage(file, caption, tags) {
     const [progress, setProgress] = useState(0);
@@ -31,5 +31,5 @@ export default function useAppStorage(file, caption, tags) {
 
     }, [file, caption, tags]);
 
-    return {progress, url, error, setProgress, setUrl}
+    return { progress, url, error, setProgress, setUrl }
 }

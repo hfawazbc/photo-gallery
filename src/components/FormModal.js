@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import '../styles/formModal.css';
+import React, { useState, useEffect } from 'react';
 import UploadBackground from '../icons/upload.png';
 import { v4 as uuidv4 } from 'uuid';
+import '../styles/formModal.css';
 
 import useAppStorage from '../hooks/useAppStorage';
 

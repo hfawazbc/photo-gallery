@@ -12,9 +12,6 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
     row-gap: 25px;
-
-    width: 80%;
-    margin: auto;
 }
 
 .image-grid-pic {

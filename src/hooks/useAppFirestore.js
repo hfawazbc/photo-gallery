@@ -1,5 +1,5 @@
-import {useState, useEffect} from 'react';
-import {appFirestore} from '../firebase/config';
+import { useState, useEffect } from 'react';
+import { appFirestore } from '../firebase/config';
 
 export default function useAppFirestore(collection) {
     const [docs, setDocs] = useState([]);
@@ -18,5 +18,5 @@ export default function useAppFirestore(collection) {
         return () => unsubscribe();
     }, [collection])
 
-    return {docs}
+    return { docs }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/imageModal.css';
 import { v4 as uuidv4 } from 'uuid';
+import '../styles/imageModal.css';
 
 export default function ImageModal({id, selectedImage, setSelectedImage, imageId, url, caption, tags}) {
     let docBody = document.querySelector('body');

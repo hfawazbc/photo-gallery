@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useAppFirestore from '../hooks/useAppFirestore';
-import '../styles/imageGrid.css';
 import ImageModal from './ImageModal';
+import '../styles/imageGrid.css';
 
 export default function ImageGrid() {
     const {docs} = useAppFirestore('images');
