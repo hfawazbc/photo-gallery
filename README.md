@@ -18,7 +18,7 @@ Photo Gallery is a CRUD application that allows you to upload and view your phot
 - Firebase
 
 ## Installation
-- Ensure you have initialized git in your local repository.
+- Run ```git init``` to initialize git in your local repository.
 - Run ```git pull https://github.com/hfawazbc/photo-gallery``` to pull the project files from the master branch to your local git repository.
 
 ## Usage
