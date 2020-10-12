@@ -4,14 +4,14 @@ import 'firebase/firestore';
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    databaseURL: process.env.REACT_APP_DATABASE_URL,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID,
-    measurementId: process.env.REACT_APP_MEASUREMENT_ID
+    apiKey: "AIzaSyBBg6rkjAFnouSzn5jKwbBuePq7fvTCRo8",
+    authDomain: "photo-gallery-fd50c.firebaseapp.com",
+    databaseURL: "https://photo-gallery-fd50c.firebaseio.com",
+    projectId: "photo-gallery-fd50c",
+    storageBucket: "photo-gallery-fd50c.appspot.com",
+    messagingSenderId: "861784858401",
+    appId: "1:861784858401:web:17f586dab6a7e5b2d2e860",
+    measurementId: "G-EZC39F94QV"
 };
 
 // Initialize Firebase
