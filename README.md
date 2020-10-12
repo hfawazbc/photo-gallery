@@ -9,6 +9,7 @@
 
 ## Description
 Photo Gallery is a CRUD application that allows you to upload and view your photos.
+Visit site: https://hf-photo-gallery.herokuapp.com/
 
 ## Technologies
 - HTML5
